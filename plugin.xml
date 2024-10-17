@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-compass-utils-plugin" version="1.0.0">
+
+  <name>Cordova Compass Utils Plugin</name>
+  <description>Cordova community pass utils plugin</description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=10.0.0" />
+    <engine name="cordova-android" version=">=9.0.0" />
+  </engines>
+
+  <js-module src="www/androidUtils.js" name="AndroidUtils">
+    <clobbers target="AndroidUtils" />
+  </js-module>
+
+  <platform name="android">
+
+    <source-file src="src/android/org/apache/cordova/plugin/androidutils/AESCipherWrap.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+    <source-file
+      src="src/android/org/apache/cordova/plugin/androidutils/ClientSecurePayloadProducer.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+    <source-file src="src/android/org/apache/cordova/plugin/androidutils/CompassEncodedKeySpec.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+    <source-file src="src/android/org/apache/cordova/plugin/androidutils/EncodingUtils.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+    <source-file src="src/android/org/apache/cordova/plugin/androidutils/PreferencesManager.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+    <source-file src="src/android/org/apache/cordova/plugin/androidutils/RSACipherWrap.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+    <source-file src="src/android/org/apache/cordova/plugin/androidutils/Util.kt"
+      target-dir="java/org/apache/cordova/plugin/androidutils/" />
+
+    <config-file target="config.xml" parent="/*">
+      <preference name="GradlePluginKotlinEnabled" value="true" />
+      <feature name="Util">
+        <param name="android-package" value="org.apache.cordova.plugin.Util" />
+      </feature>
+    </config-file>
+
+  </platform>
+</plugin>
