@@ -42,8 +42,10 @@ class AndroidUtils {
   }
   async prepareRequestPayload(cmtJson, bridgeRAEncPublicKey) {
     return await this.execute(this.prepareRequestPayload.name, [
-      cmtJson,
-      bridgeRAEncPublicKey,
+      JSON.stringify({
+        cmt: cmtJson,
+        bridgeRaPublicKey: bridgeRAEncPublicKey,
+      }),
     ]);
   }
   async parseResponsePayload(encryptedResponsePayload) {
