@@ -72,37 +72,37 @@ Returns a promise which resolves to an object containing the public key in base6
 Generates an AES key for encryption, which is securely stored in the Android KeyStore.
 Returns a promise which resolves to an object containing the aes key in base64 format.
 
-## AndroidUtils.saveStringData(key: string, value: string)
+## AndroidUtils.saveStringData(`key: string, value: string`)
 
 Saves a string value to the device's SharedPreferences.
 Returns a promise which resolves to an object containing a `success` boolean value i.e `{success: true}`.
 
-## AndroidUtils.saveBoolData(key: string, value: boolean)
+## AndroidUtils.saveBoolData(`key: string, value: boolean`)
 
 Saves a boolean value to the device's SharedPreferences.
 Returns a promise which resolves to an object containing a `success` boolean value i.e `{success: true}`.
 
-## AndroidUtils.getStringData(key: string)
+## AndroidUtils.getStringData(`key: string`)
 
 Retrieves a string value from the device's SharedPreferences.
 Returns a promise which resolves to an object containing  the data.
 
-## AndroidUtils.getBoolData(key: string)
+## AndroidUtils.getBoolData(`key: string`)
 
 Retrieves a boolean value from the device's SharedPreferences.
 Returns a promise which resolves to an object containing  the data.
 
-## AndroidUtils.clearData(key: string)
+## AndroidUtils.clearData(`key: string`)
 
 Clears a value from the device's SharedPreferences.
 Returns a promise which resolves to an object containing a `success` boolean value i.e `{success: true}`
 
-## AndroidUtils.prepareRequestPayload(cmtJson: string, bridgeRAEncPublicKey: string)
+## AndroidUtils.prepareRequestPayload(`cmtJson: string, bridgeRAEncPublicKey: string`)
 
 Handles encryption of the CMT request payload using the bridgeRAEncPublicKey.
 Returns a promise which resolves with a base64 encrypted request payload string.
 
-## AndroidUtils.parseResponsePayload(encryptedResponsePayload: string)
+## AndroidUtils.parseResponsePayload(`encryptedResponsePayload: string`)
 
 Handles decryption of the base64 encrypted CMT response payload string.
 Returns a promise which resolves with a decrypted response payload json string.
