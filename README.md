@@ -33,9 +33,17 @@ function onDeviceReady() {
 }
 ```
 
-## Installation
+## Installation - Cordova
 
     npx cordova plugin add https://github.com/TIV-kampala/compass-cordova-android-utils-plugin
+
+## Installation - Capacitor
+Reference: https://capacitorjs.com/docs/plugins/cordova
+
+    npm install https://github.com/TIV-kampala/compass-cordova-android-utils-plugin
+    npx cap sync
+    
+
 
 ## Supported Platforms
 
