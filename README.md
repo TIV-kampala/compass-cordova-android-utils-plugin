@@ -35,7 +35,7 @@ function onDeviceReady() {
 
 ## Installation
 
-    cordova plugin add https://github.com/TIV-kampala/compass-cordova-android-utils-plugin
+    npx cordova plugin add https://github.com/TIV-kampala/compass-cordova-android-utils-plugin
 
 ## Supported Platforms
 
