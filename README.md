@@ -102,7 +102,7 @@ Returns a promise which resolves to an object containing a `success` boolean val
 Handles encryption of the CMT request payload using the bridgeRAEncPublicKey.
 Returns a promise which resolves with a base64 encrypted request payload string.
 
-## AndroidUtils.parseResponsePayload(`encryptedResponsePayload: string`)
+## AndroidUtils.parseResponsePayload(```encryptedResponsePayload: string```)
 
 Handles decryption of the base64 encrypted CMT response payload string.
 Returns a promise which resolves with a decrypted response payload json string.
